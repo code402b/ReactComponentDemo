@@ -7,8 +7,8 @@ import {
   CounterHeading,
   CounterNumInput,
   SubmitButton,
-} from './components/components_index.jsx';
-import { CounterFlexContainer } from './styles/styles_index.jsx'
+} from './components_index.jsx';
+import { FlexContainer } from '../styles/styles_index.jsx'
 
 export default function Counter({ id }) {
 
@@ -18,25 +18,26 @@ export default function Counter({ id }) {
   const [inputNum, setInputNum] = useState(0);
 
   const handleSubmit = () => {
+    // database interaction logic...
     setCount(inputNum);
   }
 
   return (
     <>
-      <CounterContainer>
+      <CounterContainer className="styled">
 
-        <CounterHeading>Counter {id}</CounterHeading>
+        <CounterHeading className="styled">Counter {id}</CounterHeading>
 
-        <CounterFlexContainer>
+        <FlexContainer className="styled">
           <ChangeCountButton operation="-" setCount={setCount} />
-          <CountDisplay>{count}</CountDisplay>
+          <CountDisplay className="styled">{count}</CountDisplay>
           <ChangeCountButton operation="+" setCount={setCount} />
-        </CounterFlexContainer>
+        </FlexContainer>
 
-        <CounterFlexContainer>
-          <CounterNumInput value={inputNum} handleChange={setInputNum} />
+        <FlexContainer className="styled">
+          <CounterNumInput value={inputNum} handleChange={setInputNum} setState={setInputNum} />
           <SubmitButton handleSubmit={handleSubmit} />
-        </CounterFlexContainer>
+        </FlexContainer>
 
       </CounterContainer>
     </>

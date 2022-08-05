@@ -2,13 +2,14 @@ import { createRoot } from 'react-dom/client';
 import React, { useState } from 'react'
 import styled from 'styled-components';
 
-import Counter from './Counter.jsx';
+import Counter from './components/Counter.jsx';
 
 const root = createRoot(document.getElementById('root'));
 
 function App() {
 
-  const serialCounters = [...Array(6).keys()];
+  // ES6 trickery to serialize numbers into an array, simulating a data object
+  const serialCounters = [...Array(9).keys()];
 
   return (
     <Container>
