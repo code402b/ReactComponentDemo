@@ -1,24 +1,30 @@
 import { createRoot } from 'react-dom/client';
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 import Counter from './components/Counter.jsx';
 
 const root = createRoot(document.getElementById('root'));
 
 function App() {
+  const [counters, setCounters] = useState([1]);
 
-  const serialCounters = [...Array(1).keys()];
+  const addCounter = () => {
+    setCounters(prev => ([...prev, prev[prev.length - 1] + 1]));
+  }
 
   return (
     <>
-      <h1>Counter Madness</h1>
+      <div id="header">
+        <button className="addCounter" onClick={addCounter}>Add One</button>
+        {counters.length > 1 ? <h1>Counter Madness</h1> : <h1>Counter</h1>}
+      </div>
       <div className="container">
-        {serialCounters.map((id) => (
-          <Counter id={id} key={id}/>
-          ))}
+        {counters.map((id) => (
+          <Counter id={id} key={id} />
+        ))}
       </div>
     </>
-  )
+  );
 }
 
 root.render(<App />);
