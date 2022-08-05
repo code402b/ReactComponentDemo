@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
 const CounterContainer = styled.div`
-
-  display: flex;
+  width: 260px;
+  border: 2px solid teal;
+  margin: 10px;
+  box-shadow: 3px 3px 3px lightgrey;
 `
 
 export default CounterContainer;
