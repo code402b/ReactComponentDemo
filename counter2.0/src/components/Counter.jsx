@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-import { CountDisplay, CounterHeading, CounterRow } from './display/display_index.jsx';
+import { CountDisplay, CounterHeading, CounterRow } from './display/display-index.jsx';
 import {
   ChangeCountButton,
   CounterNumInput,
@@ -9,7 +9,7 @@ import {
 } from './input/inputs_index.jsx'
 
 
-import { FlexContainer } from '../styles/styles_index.jsx'
+import { FlexContainer } from './styles/styles_index.jsx'
 
 export default function Counter({ id }) {
 
@@ -19,8 +19,8 @@ export default function Counter({ id }) {
   const [inputNum, setInputNum] = useState(0);
 
   const handleSubmit = () => {
-    // database interaction logic...
     setCount(inputNum);
+    // could bde db interaction
   }
 
   return (
@@ -37,7 +37,7 @@ export default function Counter({ id }) {
 
         <CounterRow className="styled">
           <CounterNumInput value={inputNum} handleChange={setInputNum} setState={setInputNum} />
-          <SubmitButton handleSubmit={handleSubmit} />
+          <SubmitButton handleClick={handleSubmit} text={'Set Count'} />
         </CounterRow>
 
       </CounterContainer>

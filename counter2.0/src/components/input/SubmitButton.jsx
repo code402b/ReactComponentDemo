@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function SubmitButton({ handleSubmit }) {
+export default function SubmitButton({ handleClick, text }) {
   return (
-    <button onClick={handleSubmit}>Set Count</button>
+    <button onClick={handleClick}>{text}</button>
   )
 }

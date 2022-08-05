@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import FlexContainer from '../../styles/FlexContainer.styled.js';
+import FlexContainer from '../styles/FlexContainer.styled.js';
 
 const CounterRow = styled(FlexContainer)`
   justify-content: space-evenly;
