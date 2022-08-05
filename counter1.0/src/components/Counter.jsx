@@ -4,7 +4,7 @@ export default function Counter({ id }) {
 
   // state hook tracking displayed count
   const [count, setCount] = useState(0);
-  // state hook linked to controlled component
+  // state hook linked to controlled components
   const [inputNum, setInputNum] = useState(0);
 
   return (
