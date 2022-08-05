@@ -2,7 +2,9 @@ import { createRoot } from 'react-dom/client';
 import React, { useState } from 'react'
 import styled from 'styled-components';
 
+import Heading from './components/display/Heading.jsx'
 import Counter from './components/Counter.jsx';
+import FlexContainer from './styles/FlexContainer.styled.js';
 
 const root = createRoot(document.getElementById('root'));
 
@@ -12,11 +14,14 @@ function App() {
   const serialCounters = [...Array(9).keys()];
 
   return (
-    <Container>
-      {serialCounters.map((id) => (
-        <Counter id={id} key={id}/>
-        ))}
-    </Container>
+    <>
+      <Heading text="Counter Madness"/>
+      <FlexContainer>
+        {serialCounters.map((id) => (
+          <Counter id={id} key={id}/>
+          ))}
+      </FlexContainer>
+    </>
   )
 }
 

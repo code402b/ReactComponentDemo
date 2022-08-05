@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
+import { CountDisplay, CounterHeading, CounterRow } from './display/display_index.jsx';
 import {
   ChangeCountButton,
-  CountDisplay,
-  CounterHeading,
   CounterNumInput,
   SubmitButton,
-} from './components_index.jsx';
+} from './input/inputs_index.jsx'
+
+
 import { FlexContainer } from '../styles/styles_index.jsx'
 
 export default function Counter({ id }) {
@@ -26,18 +27,18 @@ export default function Counter({ id }) {
     <>
       <CounterContainer className="styled">
 
-        <CounterHeading className="styled">Counter {id}</CounterHeading>
+        <CounterHeading num={id}/>
 
-        <FlexContainer className="styled">
+        <CounterRow className="styled">
           <ChangeCountButton operation="-" setCount={setCount} />
           <CountDisplay className="styled">{count}</CountDisplay>
           <ChangeCountButton operation="+" setCount={setCount} />
-        </FlexContainer>
+        </CounterRow>
 
-        <FlexContainer className="styled">
+        <CounterRow className="styled">
           <CounterNumInput value={inputNum} handleChange={setInputNum} setState={setInputNum} />
           <SubmitButton handleSubmit={handleSubmit} />
-        </FlexContainer>
+        </CounterRow>
 
       </CounterContainer>
     </>
