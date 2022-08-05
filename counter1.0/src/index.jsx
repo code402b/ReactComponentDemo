@@ -7,17 +7,17 @@ const root = createRoot(document.getElementById('root'));
 
 function App() {
 
-  const [count, setCount] = useState(0);
-  const [inputNum, setInputNum] = useState(0);
-
-  const serialCounters = [...Array(6).keys()];
+  const serialCounters = [...Array(1).keys()];
 
   return (
-    <div className="container">
-      {serialCounters.map((id) => (
-        <Counter id={id} key={id}/>
-        ))}
-    </div>
+    <>
+      <h1>Counter Madness</h1>
+      <div className="container">
+        {serialCounters.map((id) => (
+          <Counter id={id} key={id}/>
+          ))}
+      </div>
+    </>
   )
 }
 
