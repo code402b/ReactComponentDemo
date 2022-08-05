@@ -16,7 +16,7 @@ function App() {
     <>
       <div id="header">
         <button className="addCounter" onClick={addCounter}>Add One</button>
-        {counters.length > 1 ? <h1>Counter Madness</h1> : <h1>Counter</h1>}
+        {counters.length > 1 ? <h1>Counter Madness</h1> : <h1>A Counter</h1>}
       </div>
       <div className="container">
         {counters.map((id) => (
