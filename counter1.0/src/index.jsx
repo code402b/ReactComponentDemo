@@ -1,9 +1,6 @@
 import { createRoot } from 'react-dom/client';
 import React, { useState } from 'react'
 
-import CounterContainer from './components/CounterContainer.styled.js';
-
-
 const root = createRoot(document.getElementById('root'));
 
 function App() {
@@ -13,8 +10,10 @@ function App() {
 
   return (
     <>
-      <h2>Counter</h2>
-      <div className="counterCountainer">
+
+      <div className="counterContainer">
+
+        <h2>Counter</h2>
 
         <div className="counter">
           <button onClick={() => setCount(count - 1)}>-</button>

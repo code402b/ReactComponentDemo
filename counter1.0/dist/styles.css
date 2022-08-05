@@ -1,11 +1,22 @@
+h2 {
+  text-align: center;
+}
+
 .counterContainer {
-  display: flex;
+  /* display: flex; */
+  width: 260px;
 }
 
 .counter {
   display: flex;
+  justify-content: space-evenly;
+
+  padding: 20px;
 }
 
 .counterForm {
   display: flex;
+  justify-content: space-around;
+
+  padding: 20px;
 }
