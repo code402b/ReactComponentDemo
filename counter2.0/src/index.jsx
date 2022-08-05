@@ -23,7 +23,7 @@ function App() {
     <>
       <Header>
         <SubmitButton handleClick={addCounter} text={'Add One'} />
-        <Heading text={counters.length > 1 ? "Counter Madness" : "A Counter"}/>
+        <Heading text={counters.length > 1 ? "Counter Madness" : "A Counter"} />
       </Header>
       <FlexContainer>
         {counters.map((id) => (

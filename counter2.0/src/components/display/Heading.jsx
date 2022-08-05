@@ -12,4 +12,5 @@ const StyledHeading = styled.h2`
   font-family: Verdana;
   font-weight: 500;
   font-size: 1.2em;
+  padding: 10px;
 `
